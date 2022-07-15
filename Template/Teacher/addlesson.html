@@ -1,0 +1,71 @@
+{%extends 'Teacher/thome.html'%}
+{%block title%}Add a lesson{%endblock%}
+{%block content%}
+<style>
+	label.label input[type="file"] {
+	  position: absolute;
+	  top: -900px;
+	}
+	.label {
+	  cursor: pointer;
+	  border: 1px solid #cccccc;
+	  border-radius: 5px;
+	  padding: 5px 15px;
+	  margin-top: 50px;
+	  background: #dddddd;
+	  display: inline-block;
+	}
+	.label:hover {
+	  background: #5cbd95;
+	}
+	.label:active {
+	  background: #9fa1a0;
+	}
+	.label:invalid + span {
+	  color: #000000;
+	}
+	.label:valid + span {
+	  color: #ffffff;}
+	textarea::placeholder {
+		font-style: italic;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	textarea{
+		border:4px solid #5cbd95;
+		border-radius: 16px;
+	}
+	textarea:hover{
+		border:4px solid #5cbd95;
+		border-radius: 16px;
+	}
+	button{
+		font-family: "Poppins", sans-serif;
+		font-size: 24px;
+		font-style: italic;
+		border:none;
+		padding:4px;
+		border-radius: 10px;
+		background-color: #5cbd95;
+		color: white;
+	}
+  </style>
+		<h1>Make your own lessons for our students,{{user.username}}!!! Upload first a photo after make for them a description and you will complete the lesson.
+		<br>Atetion, after you upload an image here, that image doesn`t apper like uploads.	
+		</h1>
+		{%load static%}
+		<form method="post" enctype="multipart/form-data">
+					{%csrf_token%}
+					<label class="label">
+						<input type="file" name="imag" id = 'imag' required>
+						<span>Select a lesson</span>
+					</label>
+				
+					<div style = "margin-top: 20px;">
+						<h1 style = "font-style:italic;">Write your description for students here...</h1></div>	
+					<div>
+						<textarea  name="text" placeholder="Enter your description..." style="width:80%; height:300px;"></textarea>		
+					</div>
+					<button type="submit" class="btn btn-primary">Post your lesson</button>
+		</form>
+{%endblock%}	 				

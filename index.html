@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Editor algorithms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+      textarea::placeholder{
+        font-size:20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold; font-style: italic;
+      }
+    </style>
+
+  </head>
+  <body style=" background-color: #485461;background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); color:aliceblue;">
+    
+    <center>
+      <h1 style="color:white">Editor for algorithms</h1>
+      <h1 style="color:white">With this editor you cand compile algorithms for solving different problems!</h1>
+      <form id="myform" name="myform" method="post" action="compilecode">
+        <h3 style="color:white;margin-top:20px;font-style:italic;">Write your code here...</h3>
+        <textarea rows="13" cols="100" id="code" name="code" placeholder="Write your code here..." style="border:5px solid darkgoldenrod;border-radius:10px;"></textarea>
+        <br />
+        <h3 style="color:white;margin-top:20px;font-style:italic;">Write your input...</h3>
+        <textarea rows="10" cols="100" id="input" name="input" placeholder="Write your input here..." style="border:5px solid darkgoldenrod;border-radius:10px;margin-bottom:20px;"></textarea>
+        <br />
+        Language :
+        <select name="lang" style="margin:10px;">
+          <option value="C">C</option>
+          <option value="Java">Java</option>
+          <option value="C++">C++</option>
+          <option value="Python">Python</option>
+        </select>
+        Compile With Input :
+        <input type="radio" name="inputRadio" id="inputRadio" value="true" />Yes
+        <input type="radio" name="inputRadio" id="inputRadio" value="false" />No
+        <br />
+        <input type="submit" value="Compile" name="submit" style="background-color: #28313b;padding:6px; border-radius:5px; border:none; color:white"/> <a style="margin-left: 10px;" href = "http://127.0.0.1:8000/student/editor"><button type="button" class="btn btn-dark">JS Editor</button></a>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      </form>
+    </center>
+   
+
+  </body>
+</html>
